@@ -40,7 +40,7 @@ func LoginHandler(c *gin.Context) {
 	// 验证登录密码
 	// 业务处理,到这里，绑定成功，参数校验也基本满足要求,执行业务逻辑处理
 	if err := logic.Login(p); err != nil {
-		response.Error(c, controller.CodeInvalidPassword)
+		response.Error(c, controller.CodeServerBusy)
 		return
 		// c.JSON(http.StatusOK, gin.H{
 		// 	"code": err.Error(),
