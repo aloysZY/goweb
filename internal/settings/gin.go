@@ -9,12 +9,13 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/aloysZy/goweb/global/conf"
 	"github.com/gin-gonic/gin"
 )
 
 func SetModel() {
 	// 设置 gin 的模式，这里也根据配置文件来吧
-	switch Conf.Mode {
+	switch conf.Config.Mode {
 	case "release":
 		gin.SetMode(gin.ReleaseMode)
 	case "test":
@@ -25,10 +26,10 @@ func SetModel() {
 // Start 启动服务
 func Start(r *gin.Engine) {
 	srv := &http.Server{
-		Addr:    Conf.Addr + ":" + Conf.Port,
+		Addr:    conf.Config.Addr + ":" + conf.Config.Port,
 		Handler: r,
 	}
-	log.Printf("[%v]Server listen: %v:%v Actual pid is %d", Conf.Name, Conf.Addr, Conf.Port, syscall.Getpid())
+	log.Printf("[%v]Server listen: %v:%v Actual pid is %d", conf.Config.Name, conf.Config.Addr, conf.Config.Port, syscall.Getpid())
 	go func() {
 		// 开启一个goroutine启动服务
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {

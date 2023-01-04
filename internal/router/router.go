@@ -1,10 +1,12 @@
 package router
 
 import (
-	"github.com/aloysZy/goweb/internal/controller/server/login"
-	"github.com/aloysZy/goweb/internal/controller/server/signUp"
+	"github.com/aloysZy/goweb/global/conf"
+	"github.com/aloysZy/goweb/internal/controller/user/login"
+	"github.com/aloysZy/goweb/internal/controller/user/signUp"
 	"github.com/aloysZy/goweb/internal/logger"
 	"github.com/aloysZy/goweb/internal/settings"
+	"github.com/aloysZy/goweb/pkg/validator"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
@@ -13,7 +15,7 @@ func SetupRouter() {
 	// 设置model
 	settings.SetModel()
 	// 初始化 validator,这个是 gin记录翻译的包
-	if err := settings.InitTrans(settings.Conf.Locale); err != nil {
+	if err := validator.InitTrans(conf.Config.Locale); err != nil {
 		zap.L().Error("init Trans failed", zap.Error(err))
 	}
 	// 初始化 gin

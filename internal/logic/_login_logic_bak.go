@@ -30,12 +30,12 @@ package logic
 // 		}
 // 		// 验证用户输入的密码是否正确 user.Password 数据库密码，p.Password 用户输入密码
 // 		if b := settings.ComparePasswords(user.Password, p.Password); b != true {
-// 			zap.L().Error("密码错误", zap.String("username", p.Username), zap.String("password", p.Password), zap.Error(err))
+// 			zap.L().Error("密码错误", zap.String("Username", p.Username), zap.String("Password", p.Password), zap.Error(err))
 // 			return errors.New("密码错误")
 // 		}
-// 		zap.L().Info("用户登录成功", zap.String("username", p.Username), zap.String("password", p.Password))
+// 		zap.L().Info("用户登录成功", zap.String("Username", p.Username), zap.String("Password", p.Password))
 // 		return nil
 // 	}
-// 	zap.L().Info("用户不存在", zap.String("username", p.Username))
+// 	zap.L().Info("用户不存在", zap.String("Username", p.Username))
 // 	return errors.New("用户不存在")
 // }
