@@ -1,0 +1,27 @@
+name: aloys
+mode: dev
+port: 8080
+machine_id: 1
+locale: zh
+addr: 127.0.0.1
+
+log:
+  level: debug
+  filename: "./log/goweb.log"
+  max_size: 1000
+  max_age: 3600
+  max_backups: 5
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: ydw@123
+  db: ginweb
+  max_open_conns: 100
+  max_idle_conns: 20
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  db: 0
