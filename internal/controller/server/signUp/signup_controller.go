@@ -1,16 +1,11 @@
 package signUp
 
 import (
-	"net/http"
-
 	"github.com/aloysZy/goweb/internal/controller"
 	"github.com/aloysZy/goweb/internal/controller/response"
 	"github.com/aloysZy/goweb/internal/logic"
 	"github.com/aloysZy/goweb/internal/model"
-	"github.com/aloysZy/goweb/internal/settings"
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
-	"go.uber.org/zap"
 )
 
 // 业务路由，参数效验，请求转发
@@ -24,22 +19,24 @@ func SignUpHandler(c *gin.Context) {
 	p := new(model.ParamSignUpUser)
 	// ShouldBind()会根据请求的Content-Type自行选择绑定器
 	if err := c.ShouldBind(p); err != nil {
-		zap.L().Error("signUp with invalid parameters", zap.Error(err))
-		errs, ok := err.(validator.ValidationErrors)
-		if !ok {
-			// 如果类型断言，发现错误不是可以反应的错误，直接返回
-			response.Error(c, controller.CodeInvalidParams)
-			return
-		}
+		// zap.L().Error("signUp with invalid parameters", zap.Error(err))
+		response.ErrorWithMsg(c, controller.CodeInvalidParams, err.Error())
+		return
+		// errs, ok := err.(validator.ValidationErrors)
+		// if !ok {
+		// 	// 如果类型断言，发现错误不是可以反应的错误，直接返回
+		// 	response.Error(c, controller.CodeInvalidParams)
+		// 	return
+		// }
 		// 否则进行翻译
-		response.ErrorWithMsg(c, controller.CodeInvalidParams, settings.RemoveTopStruct(errs.Translate(settings.Trans)))
+		// response.ErrorWithMsg(c, controller.CodeInvalidParams, settings.RemoveTopStruct(errs.Translate(settings.Trans)))
 		// c.JSON(http.StatusOK, gin.H{
 		// 	// "code": errs.Translate(settings.Trans),
 		// 	// 进一步删除结构体信息，根据需求来修改
 		// 	"code": settings.RemoveTopStruct(errs.Translate(settings.Trans)),
 		// 	"msg":  "请求参数有误(翻译)",
 		// })
-		return
+		// return
 	}
 	// 业务处理,到这里，绑定成功，参数校验也基本满足要求,执行业务逻辑处理
 	if err := logic.SignUp(p); err != nil {
@@ -52,8 +49,9 @@ func SignUpHandler(c *gin.Context) {
 		return
 	}
 	// 整体流程不存问题返回成功
-	c.JSON(http.StatusOK, gin.H{
-		"code": 200,
-		"msg":  "注册成功",
-	})
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"code": 200,
+	// 	"msg":  "注册成功",
+	// })
+	response.Success(c)
 }

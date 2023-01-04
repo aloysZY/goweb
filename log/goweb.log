@@ -1462,3 +1462,316 @@
 {"level":"INFO","time":"2023-01-04T11:59:26.598+0800","caller":"logger/logger.go:58","msg":"init logger success"}
 {"level":"INFO","time":"2023-01-04T11:59:26.615+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
 {"level":"INFO","time":"2023-01-04T11:59:26.624+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T15:53:18.839+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T15:53:18.850+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T15:53:18.856+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:14:40.244+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:14:40.256+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:14:40.260+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:17:09.772+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:17:09.784+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:17:09.790+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:17:52.726+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:17:52.739+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:17:52.743+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:19:09.966+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:19:09.980+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:19:09.983+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:22:17.107+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:22:17.117+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:22:17.123+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:22:25.967+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:22:25.976+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:22:25.981+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:23:15.084+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:23:15.110+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:23:15.117+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:23:45.623+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:23:45.641+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:23:45.646+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:24:33.321+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:24:33.345+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:24:33.366+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:25:50.661+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:25:50.669+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:25:50.676+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:26:47.946+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:26:47.984+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:26:48.071+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:27:02.424+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:27:02.441+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:27:02.453+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:29:20.439+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:29:20.452+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:29:20.458+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:30:44.897+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:30:44.910+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:30:44.916+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T16:30:51.064+0800","caller":"logic/signup_logic.go:18","msg":"用户名重复","username":"qimi6","error":"用户已存在"}
+{"level":"INFO","time":"2023-01-04T16:30:51.065+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.039060631}
+{"level":"ERROR","time":"2023-01-04T16:32:14.043+0800","caller":"logic/signup_logic.go:18","msg":"用户名重复","username":"qimi1","error":"用户已存在"}
+{"level":"INFO","time":"2023-01-04T16:32:14.044+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.009254602}
+{"level":"INFO","time":"2023-01-04T16:32:25.101+0800","caller":"logic/signup_logic.go:49","msg":"success","username":"qimi7"}
+{"level":"INFO","time":"2023-01-04T16:32:25.101+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.050486901}
+{"level":"INFO","time":"2023-01-04T16:33:15.278+0800","caller":"logic/signup_logic.go:49","msg":"success","username":"qimi4"}
+{"level":"INFO","time":"2023-01-04T16:33:15.279+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.125985552}
+{"level":"INFO","time":"2023-01-04T16:35:29.585+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:35:29.594+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:35:29.600+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:36:08.830+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:36:08.842+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:36:08.848+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:36:15.340+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:36:15.349+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:36:15.356+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:36:20.239+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:36:20.249+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:36:20.256+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:39:20.097+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:39:20.109+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:39:20.113+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:39:48.345+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:39:48.355+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:39:48.361+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:41:02.842+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:41:02.863+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:41:02.879+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:41:24.147+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:41:24.157+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:41:24.162+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:43:48.559+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:43:48.571+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:43:48.578+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:44:27.909+0800","caller":"logic/login_logic.go:36","msg":"success","username":"qimi6","password":"111"}
+{"level":"INFO","time":"2023-01-04T16:44:27.909+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.014934064}
+{"level":"ERROR","time":"2023-01-04T16:44:40.045+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222"}
+{"level":"INFO","time":"2023-01-04T16:44:40.045+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.022486287}
+{"level":"ERROR","time":"2023-01-04T16:45:28.152+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222"}
+{"level":"INFO","time":"2023-01-04T16:45:28.152+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.027377071}
+{"level":"INFO","time":"2023-01-04T16:48:12.186+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:48:12.195+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:48:12.200+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:54:27.184+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:54:27.198+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:54:27.205+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:55:02.310+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:55:02.321+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:55:02.328+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:58:55.115+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:58:55.150+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:58:55.171+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:59:00.548+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:59:00.564+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:59:00.569+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:59:18.778+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:59:18.786+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:59:18.791+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T16:59:43.705+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:59:43.726+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:59:43.742+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T16:59:45.467+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"密码错误"}
+{"level":"INFO","time":"2023-01-04T16:59:45.467+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.018324332}
+{"level":"INFO","time":"2023-01-04T16:59:52.720+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T16:59:52.729+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T16:59:52.732+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:00:00.663+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"密码错误"}
+{"level":"INFO","time":"2023-01-04T17:00:00.664+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.019467587}
+{"level":"INFO","time":"2023-01-04T17:01:02.110+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:01:02.123+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:01:02.130+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:01:11.012+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:01:11.021+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:01:11.024+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:14:45.003+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:14:45.027+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:14:45.058+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:14:49.574+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"用户名或密码错误"}
+{"level":"INFO","time":"2023-01-04T17:14:49.574+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.010319476}
+{"level":"INFO","time":"2023-01-04T17:14:54.493+0800","caller":"logic/login_logic.go:36","msg":"success","username":"qimi6","password":"111"}
+{"level":"INFO","time":"2023-01-04T17:14:54.493+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.00513198}
+{"level":"INFO","time":"2023-01-04T17:22:58.172+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:22:58.192+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:22:58.239+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:23:26.083+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:23:26.100+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:23:26.108+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:23:28.728+0800","caller":"logic/signup_logic.go:19","msg":"用户名重复","username":"qimi4","error":"用户名重复"}
+{"level":"INFO","time":"2023-01-04T17:23:28.728+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.050414853}
+{"level":"INFO","time":"2023-01-04T17:23:46.690+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:23:46.702+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:23:46.710+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:23:49.140+0800","caller":"logic/signup_logic.go:19","msg":"用户名重复","username":"qimi4"}
+{"level":"INFO","time":"2023-01-04T17:23:49.140+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.00804018}
+{"level":"ERROR","time":"2023-01-04T17:23:54.000+0800","caller":"logic/signup_logic.go:19","msg":"用户名重复","username":"qimi4"}
+{"level":"INFO","time":"2023-01-04T17:23:54.000+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.007280889}
+{"level":"INFO","time":"2023-01-04T17:24:31.589+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:24:31.603+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:24:31.608+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:24:53.627+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:24:53.638+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:24:53.642+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:31:35.848+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:31:35.882+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:31:35.900+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:34:48.160+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:34:48.172+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:34:48.178+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:36:22.686+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:36:22.696+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:36:22.703+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:41:15.541+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:41:15.558+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:41:15.562+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:41:28.959+0800","caller":"logic/login_logic.go:36","msg":"success","username":"qimi6","password":"111"}
+{"level":"INFO","time":"2023-01-04T17:41:28.959+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.008842243}
+{"level":"ERROR","time":"2023-01-04T17:41:35.261+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"用户名或密码错误"}
+{"level":"INFO","time":"2023-01-04T17:41:35.262+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.022720272}
+{"level":"INFO","time":"2023-01-04T17:43:07.479+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:43:07.487+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:43:07.490+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:43:10.683+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222"}
+{"level":"INFO","time":"2023-01-04T17:43:10.683+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.019575024}
+{"level":"INFO","time":"2023-01-04T17:45:30.414+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:45:30.430+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:45:30.438+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:45:31.291+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222"}
+{"level":"INFO","time":"2023-01-04T17:45:31.292+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.010716478}
+{"level":"INFO","time":"2023-01-04T17:46:16.850+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:46:16.910+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:46:16.943+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:46:19.359+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T17:46:19.359+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0158609}
+{"level":"INFO","time":"2023-01-04T17:46:55.370+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:46:55.401+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:46:55.406+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:46:59.343+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:46:59.359+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:46:59.371+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:47:58.907+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:47:58.918+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:47:58.924+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T17:47:59.733+0800","caller":"logic/login_logic.go:33","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T17:47:59.733+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.009465476}
+{"level":"INFO","time":"2023-01-04T17:50:43.320+0800","caller":"logic/login_logic.go:36","msg":"success","username":"qimi6","password":"111"}
+{"level":"INFO","time":"2023-01-04T17:50:43.322+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.010889412}
+{"level":"INFO","time":"2023-01-04T17:51:36.652+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:51:36.669+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:51:36.675+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:55:38.676+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:55:38.693+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:55:38.705+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:55:58.301+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:55:58.311+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:55:58.317+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T17:56:12.910+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T17:56:12.926+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T17:56:12.934+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:38:51.724+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:38:51.995+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:38:52.024+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:38:57.795+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:38:57.849+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:38:57.880+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:39:22.962+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:39:22.995+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:39:23.005+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T20:39:27.586+0800","caller":"logic/signup_logic.go:26","msg":"用户名重复","username":"qimi4"}
+{"level":"INFO","time":"2023-01-04T20:39:27.587+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.100374534}
+{"level":"INFO","time":"2023-01-04T20:39:39.817+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:39:39.872+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:39:39.921+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:46:06.727+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:46:06.781+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:46:06.804+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:46:19.623+0800","caller":"logic/signup_logic.go:53","msg":"success","username":"qimi5"}
+{"level":"INFO","time":"2023-01-04T20:46:19.623+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.094889417}
+{"level":"INFO","time":"2023-01-04T20:47:28.944+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:47:28.959+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:47:28.972+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:47:42.344+0800","caller":"logic/signup_logic.go:53","msg":"success","username":"qimi10"}
+{"level":"INFO","time":"2023-01-04T20:47:42.345+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.042867615}
+{"level":"INFO","time":"2023-01-04T20:49:22.587+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:49:22.647+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:49:22.670+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:49:24.260+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:49:24.309+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:49:24.327+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:49:45.283+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:49:45.305+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:49:45.319+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T20:49:55.176+0800","caller":"logic/signup_logic.go:26","msg":"用户名重复","username":"qimi10"}
+{"level":"INFO","time":"2023-01-04T20:49:55.177+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.021076526}
+{"level":"INFO","time":"2023-01-04T20:50:25.120+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:50:25.141+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:50:25.159+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T20:50:43.380+0800","caller":"logic/signup_logic.go:26","msg":"用户名重复","username":"qimi10"}
+{"level":"INFO","time":"2023-01-04T20:50:43.381+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.022622648}
+{"level":"INFO","time":"2023-01-04T20:51:45.443+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:51:45.512+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:51:45.547+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:55:12.107+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:55:12.130+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:55:12.137+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:56:19.780+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:56:19.800+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:56:19.820+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T20:58:04.327+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:58:04.353+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:58:04.367+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T20:58:07.569+0800","caller":"logic/signup_logic.go:26","msg":"用户名重复","username":"qimi10"}
+{"level":"INFO","time":"2023-01-04T20:58:07.570+0800","caller":"logger/logger.go:91","msg":"/signUp","status":200,"method":"POST","path":"/signUp","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.02015563}
+{"level":"INFO","time":"2023-01-04T20:58:21.048+0800","caller":"logic/login_logic.go:34","msg":"success","username":"qimi6","password":"111"}
+{"level":"INFO","time":"2023-01-04T20:58:21.048+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.013912106}
+{"level":"INFO","time":"2023-01-04T20:59:26.035+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T20:59:26.063+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T20:59:26.083+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T20:59:29.347+0800","caller":"logic/login_logic.go:31","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T20:59:29.347+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.01425659}
+{"level":"INFO","time":"2023-01-04T21:00:48.654+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:00:48.667+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:00:48.674+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:02:14.917+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:02:14.927+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:02:14.935+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T21:02:16.598+0800","caller":"logic/login_logic.go:31","msg":"用户名或密码错误","username":"qimi6","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T21:02:16.598+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.012920862}
+{"level":"INFO","time":"2023-01-04T21:02:40.148+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:02:40.168+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:02:40.178+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:02:47.486+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:02:47.498+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:02:47.508+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T21:04:25.567+0800","caller":"logic/login_logic.go:23","msg":"用户不存在","username":"qimi11","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2023-01-04T21:04:25.569+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.030552068}
+{"level":"INFO","time":"2023-01-04T21:05:54.146+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:05:54.164+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:05:54.172+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:06:48.772+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:06:48.807+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:06:48.820+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T21:06:53.756+0800","caller":"logic/login_logic.go:23","msg":"用户不存在","username":"qimi11","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2023-01-04T21:06:53.764+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.028048127}
+{"level":"INFO","time":"2023-01-04T21:10:28.587+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:10:28.605+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:10:28.613+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"ERROR","time":"2023-01-04T21:10:30.318+0800","caller":"logic/login_logic.go:23","msg":"用户不存在","username":"qimi11","error":"sql: no rows in result set"}
+{"level":"INFO","time":"2023-01-04T21:10:30.318+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.008574641}
+{"level":"ERROR","time":"2023-01-04T21:10:43.382+0800","caller":"logic/login_logic.go:31","msg":"用户名或密码错误","username":"qimi1","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T21:10:43.382+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.015964339}
+{"level":"INFO","time":"2023-01-04T21:11:34.388+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:11:34.414+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:11:34.419+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"WARN","time":"2023-01-04T21:11:35.352+0800","caller":"logic/login_logic.go:31","msg":"用户名或密码错误","username":"qimi1","password":"222","error":"crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"level":"INFO","time":"2023-01-04T21:11:35.352+0800","caller":"logger/logger.go:91","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.009799638}
+{"level":"INFO","time":"2023-01-04T21:21:33.572+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:21:33.600+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:21:33.607+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:22:57.305+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:22:57.374+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:22:57.399+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:22:59.785+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:22:59.800+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:22:59.805+0800","caller":"redis/redis.go:32","msg":"init redis success"}
+{"level":"INFO","time":"2023-01-04T21:23:13.779+0800","caller":"logger/logger.go:58","msg":"init logger success"}
+{"level":"INFO","time":"2023-01-04T21:23:13.805+0800","caller":"mysql/mysql.go:25","msg":"init mysql success"}
+{"level":"INFO","time":"2023-01-04T21:23:13.815+0800","caller":"redis/redis.go:32","msg":"init redis success"}

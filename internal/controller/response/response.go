@@ -24,7 +24,7 @@ type ResponseData struct {
 // 	c.JSONP(http.StatusOK, rd)
 // }
 
-// 返回错误
+// Error 返回错误
 func Error(c *gin.Context, code controller.ResCode) {
 	c.JSONP(http.StatusOK, &ResponseData{
 		Code:    code,
@@ -33,8 +33,8 @@ func Error(c *gin.Context, code controller.ResCode) {
 	})
 }
 
-// 返回正常
-func Successr(c *gin.Context, data any) {
+// Success 返回正常
+func Success(c *gin.Context, data ...any) {
 	c.JSONP(http.StatusOK, &ResponseData{
 		Code:    controller.CodeSuccess,
 		Message: controller.CodeSuccess.Msg(),
@@ -42,7 +42,7 @@ func Successr(c *gin.Context, data any) {
 	})
 }
 
-// 返回自定义错误
+// ErrorWithMsg 返回自定义错误信息
 func ErrorWithMsg(c *gin.Context, code controller.ResCode, msg any) {
 	c.JSONP(http.StatusOK, &ResponseData{
 		Code:    code,

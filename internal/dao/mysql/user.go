@@ -8,30 +8,24 @@ import (
 // 每一步的数据库操作都进行封装，登录 logic的业务需求调用
 
 // CheckUserExist 查看用户名是都存在
-func CheckUserExist(u string) (c int, err error) {
+func CheckUserExist(u string) (count int64, err error) {
 	sqlStr := `select count(user_id) from user where username = ?`
-	if err := db.Get(&c, sqlStr, u); err != nil {
-		return 0, err
-	}
-	return c, nil
+	err = db.Get(&count, sqlStr, u)
+	return
 }
 
 // InsertUser 注册用户,插入数据库
-func InsertUser(user *model.SignUpUser) error {
+func InsertUser(user *model.SignUpUser) (err error) {
 	sqlStr := `insert into user(user_id,username, password,email) values(?,?,?,?)`
-	if _, err := db.Exec(sqlStr, user.UserID, user.UserName, user.Password, user.Email); err != nil {
-		return err
-	}
-	return nil
+	_, err = db.Exec(sqlStr, user.UserID, user.UserName, user.Password, user.Email)
+	return
 }
 
 // GetPassword 查询用户密码
-func GetPassword(user *model.LoginUser) error {
+func GetPassword(user *model.LoginUser) (err error) {
 	sqlStr := "select username, password from user where username = ?"
-	if err := db.Get(user, sqlStr, user.UserName); err != nil {
-		return err
-	}
-	return nil
+	err = db.Get(user, sqlStr, user.UserName)
+	return
 }
 
 // func GetPassword(user *model.LoginUser) error {

@@ -16,12 +16,9 @@ func HashAndSalt(pwdStr string) (pwdHash string, err error) {
 }
 
 // ComparePasswords 登录解密,
-func ComparePasswords(hashedPwd string, plainPwd string) bool {
+func ComparePasswords(hashedPwd string, plainPwd string) (err error) {
 	byteHash := []byte(hashedPwd)
 	bytePwd := []byte(plainPwd)
-	err := bcrypt.CompareHashAndPassword(byteHash, bytePwd)
-	if err != nil {
-		return false
-	}
-	return true
+	err = bcrypt.CompareHashAndPassword(byteHash, bytePwd)
+	return err
 }
