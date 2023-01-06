@@ -6,6 +6,7 @@ const (
 	ErrorUserExist          = "用户名重复"
 	ErrorUserNotExist       = "用户不存在"
 	ErrorInvalidPassword    = "用户名或密码错误"
+	ErrorGetToken           = "获取 token 错误"
 	codeServerBusy          = "服务繁忙"
 	ErrorQueryFailed        = "查询数据库错误"
 	ErrorCreateUserId       = "userId创建错误"

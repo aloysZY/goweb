@@ -8,8 +8,9 @@ type SignUpUser struct {
 	Email    string `db:"email"`
 }
 
-// LoginUser 解析数据库参数，往数据库写数据，根据用户
+// LoginUser 解析数据库参数，往数据库写数据，根据用户输入
 type LoginUser struct {
+	UserId   uint64 `db:"user_id"`
 	UserName string `db:"username"`
 	Password string `db:"password"`
 }

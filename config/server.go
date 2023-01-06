@@ -10,4 +10,5 @@ type ServerConfig struct {
 	*LogConfig   `mapstructure:"log"`
 	*MySQLConfig `mapstructure:"mysql"`
 	*RedisConfig `mapstructure:"redis"`
+	*Jwt         `mapstructure:"jwt"`
 }

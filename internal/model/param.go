@@ -19,6 +19,7 @@ type ParamSignUpUser struct {
 // ParamLoginUser 登录，根据数据库字段，和前端传入，以及必要字段来设定
 // 登录验证用户名密码就行了
 type ParamLoginUser struct {
+	UserID uint64 `json:"user_id" db:"user_id"`
 	// binding:"required 表示不能为空
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required"`

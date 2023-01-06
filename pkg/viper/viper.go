@@ -3,6 +3,7 @@ package viper
 import (
 	"flag"
 	"fmt"
+	"log"
 
 	"github.com/aloysZy/goweb/global/conf"
 	"github.com/fsnotify/fsnotify"
@@ -17,7 +18,7 @@ func Viper() error {
 	viper.SetConfigFile(myConfig)
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
-		fmt.Println("夭寿啦~配置文件被人修改啦...")
+		log.Println("夭寿啦~配置文件被人修改啦...")
 		viper.Unmarshal(&conf.Config)
 
 	})
@@ -28,6 +29,6 @@ func Viper() error {
 	if err := viper.Unmarshal(&conf.Config); err != nil {
 		panic(fmt.Errorf("unmarshal to Conf failed, err:%v", err))
 	}
-	fmt.Printf("init viper success\n")
+	log.Println("init viper success")
 	return err
 }

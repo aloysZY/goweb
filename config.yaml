@@ -21,6 +21,12 @@ mysql:
   max_open_conns: 100
   max_idle_conns: 20
 
+jwt:
+  signing_key: goweb
+  expires_time: 1
+  buffer_time: 86400
+  issuer: aloys
+
 redis:
   host: 127.0.0.1
   port: 6379

@@ -23,7 +23,8 @@ func InsertUser(user *model.SignUpUser) (err error) {
 
 // GetPassword 查询用户密码
 func GetPassword(user *model.LoginUser) (err error) {
-	sqlStr := "select username, password from user where username = ?"
+	// 这要把 userid 查询出来赋值
+	sqlStr := "select user_id, username, password from user where username = ?"
 	err = db.Get(user, sqlStr, user.UserName)
 	return
 }
