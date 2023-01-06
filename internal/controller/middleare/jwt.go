@@ -1,11 +1,9 @@
 package middleare
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/aloysZy/goweb/internal/controller"
-	"github.com/aloysZy/goweb/internal/logic/user"
 	"github.com/aloysZy/goweb/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -22,8 +20,6 @@ const (
 
 func JWTAuthMiddleware() func(c *gin.Context) {
 	return func(c *gin.Context) {
-		// 需要刷新的rtoken
-		rt := c.Query("refresh_token")
 		// 客户端携带Token有三种方式 1.放在请求头 2.放在请求体 3.放在URI
 		// 这里假设Token放在Header的Authorization中，并使用Bearer开头
 		// 这里的具体实现方式要依据你的实际业务情况决定
@@ -44,23 +40,9 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		}
 		// parts[1]是获取到的tokenString，我们使用之前定义好的解析JWT的函数来解析它
 		mc, err := jwt.ParseToken(parts[1])
-		// if err != nil {
-		// 	zap.L().Warn(errorInvalidToken, zap.Error(err))
-		// 	controller.Error(c, controller.CodeInvalidToken)
-		// 	c.Abort()
-		// 	return
-		// } else
-		if err == nil {
-			c.Set(controller.ContextUserIDKey, mc.UserID)
-			zap.L().Debug(controller.CodeSuccess.Msg())
-			c.Next() // 后续的处理函数可以用过c.Get("username")来获取当前请求的用户信息
-			return
-		}
-		// 判断如果，atoken 过期了，但是 rtoken 没有过去，刷新 token，都刷新
-		natoken, nrtoken, err := user.RefshToken(parts[1], rt)
 		if err != nil {
-			zap.L().Error(errorRefshTonek, zap.Error(err))
-			controller.Error(c, controller.CodeRefshToken)
+			zap.L().Warn(errorInvalidToken, zap.Error(err))
+			controller.Error(c, controller.CodeInvalidToken)
 			c.Abort()
 			return
 		}
@@ -71,8 +53,6 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		// 	c.Abort()
 		// 	return
 		// }
-		// 这里先尝试打印出来 token
-		fmt.Printf("atoken=%v\n rTtoken=%v", natoken, nrtoken)
 
 		// 将当前请求的username信息保存到请求的上下文c上
 		// fmt.Printf("middleware UserId = %v\n", mc.UserID)
