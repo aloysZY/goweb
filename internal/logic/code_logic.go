@@ -12,9 +12,10 @@ const (
 	ErrorCreateUserId       = "userId创建错误"
 	ErrorEncryptionPassword = "密码加密错误"
 	ErrorInsertFailed       = "插入数据库错误"
-	codeInvalidToken        = "无效的Token"
-	codeInvalidAuthFormat   = "认证格式有误"
+	ErrorInvalidToken       = "无效的Token"
+	ErrorInvalidAuthFormat  = "认证格式有误"
 	codeNotLogin            = "未登录"
+	ErrorAuthToken          = "请求头缺少Auth Token"
 
 	Username = "Username"
 	Password = "Password"

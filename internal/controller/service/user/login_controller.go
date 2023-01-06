@@ -12,7 +12,7 @@ import (
 // LoginHandler 登录请求处理
 func LoginHandler(c *gin.Context) {
 	// 验证登录请求参数
-	p := new(model.ParamLoginUser)
+	p := new(model.LoginUser)
 	// ShouldBind()会根据请求的Content-Type自行选择绑定器
 	// 将用户输入的用户名和密码绑定到p
 	if err := c.ShouldBind(p); err != nil {
@@ -38,25 +38,24 @@ func LoginHandler(c *gin.Context) {
 	}
 	// 验证登录密码
 	// 业务处理,到这里，绑定成功，参数校验也基本满足要求,执行业务逻辑处理
-	token, err := user.Login(p)
-	if err != nil {
+	if err := user.Login(p); err != nil {
 		controller.Error(c, controller.CodeServerBusy)
 		return
 		// c.JSON(http.StatusOK, gin.H{
 		// 	"code": err.Error(),
-		// 	"msg":  "登录失败",
+		// 	"msg":  "登录失败",s
 		// })
 	}
 
-	// fmt.Printf("p%v", p)
-	// 还是感觉在登录里面直接做 token 吧
-	// token, err := login.GetToken(p)
-	// if err != nil {
-	// 	response.Error(c, controller.CodeServerBusy)
-	// }
+	// fmt.Printf("p%v\n", p)
+	// 还是感觉在登录里面直接做 token 吧,还是在这里调用吧
+	aToken, rToken, err := user.GetToken(p.UserId)
+	if err != nil {
+		controller.Error(c, controller.CodeServerBusy)
+	}
 
 	// 返回响应
-	controller.Success(c, token)
+	controller.Success(c, aToken, rToken)
 	// c.JSON(http.StatusOK, gin.H{
 	// 	"code":    200,
 	// 	"message": "login success",

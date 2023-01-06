@@ -30,12 +30,14 @@ func SetupRouter() {
 	// 登录
 	r.POST("/login", user.LoginHandler)
 
+	r.POST("/refresh", user.RefreshTokenHandler)
+
 	// 这里面的路由都需要登录验证
 	r.Use(middleare.JWTAuthMiddleware())
 	{
 		// 测试
 		r.POST("/xxx", func(c *gin.Context) {
-			userId := c.MustGet("userId").(uint64)
+			userId := c.MustGet("userID").(uint64)
 			fmt.Printf("route userid=%v\n", userId)
 			c.JSON(http.StatusOK, gin.H{
 				"code": 2000,

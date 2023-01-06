@@ -14,6 +14,7 @@ const (
 	CodeNotLogin
 	CodeQueryDatabase
 	CodeRegistrationFailed
+	CodeRefshToken
 )
 
 var msgFlags = map[ResCode]string{
@@ -29,6 +30,7 @@ var msgFlags = map[ResCode]string{
 	CodeInvalidToken:      "无效的Token",
 	CodeInvalidAuthFormat: "认证格式有误",
 	CodeNotLogin:          "未登录",
+	CodeRefshToken:        "刷新 token 错误",
 }
 
 func (c ResCode) Msg() string {

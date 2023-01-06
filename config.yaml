@@ -23,8 +23,8 @@ mysql:
 
 jwt:
   signing_key: goweb
-  expires_time: 1
-  buffer_time: 86400
+  expires_time: 1  #配置的是分钟
+  buffer_time: 60 #配置的是分钟
   issuer: aloys
 
 redis:

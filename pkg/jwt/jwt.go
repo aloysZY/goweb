@@ -23,30 +23,37 @@ func keyFunc(_ *jwt.Token) (i interface{}, err error) {
 // 如果想要保存更多信息，都可以添加到这个结构体中
 type CustomClaims struct {
 	// 可根据需要自行添加字段
-	UserID               uint64 `json:"user_id"`
-	UserName             string `json:"user_name"`
-	jwt.RegisteredClaims        // 内嵌标准的声明
+	UserID uint64 `json:"user_id"`
+	// UserName             string `json:"user_name"`
+	jwt.RegisteredClaims // 内嵌标准的声明
 }
 
 // TokenExpireDuration token 有效时间 直接使用配置文件
 // const TokenExpireDuration = conf.Config.Jwt.ExpiresTime
 
 // GenToken 生成JWT
-func GenToken(userId uint64, username string) (string, error) {
+func GenToken(userId uint64) (aToken, rToken string, err error) {
 	// 创建一个我们自己的声明
 	claims := &CustomClaims{
 		userId, // 自定义字段
-		username,
+		// username,
 		jwt.RegisteredClaims{
 			// ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime)),
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime * time.Hour)),
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime * time.Minute)),
 			Issuer:    conf.Config.Jwt.Issuer, // 签发人  随便写
 		},
 	}
-	// 使用指定的签名方法创建签名对象
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	// 使用指定的签名方法创建签名对象,返回atoken
 	// 使用指定的secret签名并获得完整的编码后的字符串token
-	return token.SignedString(customSecret)
+	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, claims).SignedString(customSecret)
+
+	// 生成 rToken这个是刷新用的,在这里写每次执行刷新 token 的时候会调用，两个 token 都从新刷新一下
+	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.StandardClaims{
+		ExpiresAt: time.Now().Add(conf.Config.Jwt.BufferTime * time.Minute).Unix(), // 过期时间
+		Issuer:    conf.Config.Jwt.Issuer,                                          // 签发人  随便写
+	}).SignedString(customSecret)
+	// 使用指定的secret签名并获得完整的编码后的字符串token
+	return
 }
 
 // ParseToken 解析JWT
@@ -77,5 +84,26 @@ func ParseToken(tokenString string) (claims *CustomClaims, err error) {
 	// fmt.Printf("jwt userid: %v\n", claims.UserID)
 	// fmt.Printf("jwt token: %v\n", token)
 	// fmt.Printf("jwt claims: %v\n", claims)
+	return
+}
+
+// RefreshToken 刷新AccessToken
+func RefreshToken(aToken, rToken string) (newAToken, newRToken string, err error) {
+	// refresh token无效直接返回
+	if _, err = jwt.Parse(rToken, keyFunc); err != nil {
+		return
+	}
+
+	// 从旧access token中解析出claims数据
+	var claims CustomClaims
+	_, err = jwt.ParseWithClaims(aToken, &claims, keyFunc)
+	v, _ := err.(*jwt.ValidationError)
+
+	// // 当access token是过期错误 并且 refresh token没有过期时就创建一个新的access token
+	if v.Errors == jwt.ValidationErrorExpired {
+		return GenToken(claims.UserID)
+	}
+	// 这里修改成没过期只要是正确的 token 都创建新的 token,这在中间件进行判断
+
 	return
 }
