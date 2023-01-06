@@ -2,7 +2,6 @@ package jwt
 
 import (
 	"errors"
-	"fmt"
 	"time"
 
 	"github.com/aloysZy/goweb/global/conf"
@@ -53,10 +52,10 @@ func GenToken(userId uint64, username string) (string, error) {
 // ParseToken 解析JWT
 func ParseToken(tokenString string) (claims *CustomClaims, err error) {
 	// 解析token
-	var token *jwt.Token
+	// var token *jwt.Token
 	// 如果是自定义Claim结构体则需要使用 ParseWithClaims 方法
 	claims = new(CustomClaims)
-	token, err = jwt.ParseWithClaims(tokenString, claims, keyFunc)
+	token, err := jwt.ParseWithClaims(tokenString, claims, keyFunc)
 	if err != nil {
 		return
 	}
@@ -75,8 +74,8 @@ func ParseToken(tokenString string) (claims *CustomClaims, err error) {
 	if !token.Valid {
 		err = errors.New("invalid token")
 	}
-	fmt.Printf("jwt userid: %v\n", claims.UserID)
-	fmt.Printf("jwt token: %v\n", token)
-	fmt.Printf("jwt claims: %v\n", claims)
+	// fmt.Printf("jwt userid: %v\n", claims.UserID)
+	// fmt.Printf("jwt token: %v\n", token)
+	// fmt.Printf("jwt claims: %v\n", claims)
 	return
 }

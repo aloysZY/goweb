@@ -2,7 +2,6 @@ package user
 
 import (
 	"database/sql"
-	"fmt"
 
 	"github.com/aloysZy/goweb/internal/dao/mysql"
 	"github.com/aloysZy/goweb/internal/logic"
@@ -38,7 +37,7 @@ func Login(p *model.ParamLoginUser) (token string, err error) {
 		return "", err
 	}
 	// 这样就找到了userid
-	fmt.Printf("loginc userId= %d,username=%s\n", user.UserId, user.UserName)
+	// fmt.Printf("loginc userId= %d,username=%s\n", user.UserId, user.UserName)
 	// 生成 token
 	token, err = jwt.GenToken(user.UserId, user.UserName)
 	if err != nil {

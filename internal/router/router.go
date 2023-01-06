@@ -29,21 +29,26 @@ func SetupRouter() {
 	r.POST("/signUp", user.SignUpHandler)
 	// 登录
 	r.POST("/login", user.LoginHandler)
-	// 在这里启动 gin
 
-	// 判断当前登录的用户是否是登录用户，判断请求头是否有有效的 token
-	r.POST("/xxx", middleare.JWTAuthMiddleware(), func(c *gin.Context) {
-		userId := c.MustGet("userId").(uint64)
-		fmt.Printf("userid=%v\n", userId)
-		c.JSON(http.StatusOK, gin.H{
-			"code": 2000,
-			"msg":  "success",
-			"data": gin.H{"user_id": userId},
+	// 这里面的路由都需要登录验证
+	r.Use(middleare.JWTAuthMiddleware())
+	{
+		// 测试
+		r.POST("/xxx", func(c *gin.Context) {
+			userId := c.MustGet("userId").(uint64)
+			fmt.Printf("route userid=%v\n", userId)
+			c.JSON(http.StatusOK, gin.H{
+				"code": 2000,
+				"msg":  "success",
+				"data": gin.H{"user_id": userId},
+			})
 		})
-	})
+	}
 
+	// 在这里启动 gin
 	settings.Start(r)
 
+	// 没有路由匹配
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "404",
