@@ -38,6 +38,10 @@ func RefreshToken(rt, authHeader string) (aToken, rToken string, err error) {
 		return
 	}
 	aToken, rToken, err = jwt.RefreshToken(parts[1], rt)
+	if err != nil {
+		zap.L().Error(logic.ErrorRefreshToken, zap.Error(err))
+		return
+	}
 	// fmt.Println(err)
 	// c.JSON(http.StatusOK, gin.H{
 	// 	"access_token":  aToken,

@@ -39,7 +39,7 @@ func GenToken(userId uint64) (aToken, rToken string, err error) {
 		// username,
 		jwt.RegisteredClaims{
 			// ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime)),
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime * time.Minute)),
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.ExpiresTime * time.Hour)),
 			Issuer:    conf.Config.Jwt.Issuer, // 签发人  随便写
 		},
 	}
@@ -48,9 +48,11 @@ func GenToken(userId uint64) (aToken, rToken string, err error) {
 	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, claims).SignedString(customSecret)
 
 	// 生成 rToken这个是刷新用的,在这里写每次执行刷新 token 的时候会调用，两个 token 都从新刷新一下
-	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.StandardClaims{
-		ExpiresAt: time.Now().Add(conf.Config.Jwt.BufferTime * time.Minute).Unix(), // 过期时间
-		Issuer:    conf.Config.Jwt.Issuer,                                          // 签发人  随便写
+	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.RegisteredClaims{
+		// jwt.StandardClaims早期的不建议使用
+		// ExpiresAt: time.Now().Add(conf.Config.Jwt.BufferTime * time.Minute).Unix(), // 过期时间
+		ExpiresAt: jwt.NewNumericDate(time.Now().Add(conf.Config.Jwt.BufferTime * time.Minute)),
+		Issuer:    conf.Config.Jwt.Issuer, // 签发人  随便写
 	}).SignedString(customSecret)
 	// 使用指定的secret签名并获得完整的编码后的字符串token
 	return

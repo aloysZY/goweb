@@ -17,12 +17,3 @@ func GetToken(userId uint64) (aToken, rToken string, err error) {
 	}
 	return
 }
-
-func RefshToken(aToken, rToken string) (naToken, nrToken string, err error) {
-	naToken, nrToken, err = RefreshToken(rToken, aToken)
-	if err != nil {
-		zap.L().Error(logic.ErrorGetToken, zap.Error(err))
-		return
-	}
-	return
-}

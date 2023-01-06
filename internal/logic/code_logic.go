@@ -16,6 +16,7 @@ const (
 	ErrorInvalidAuthFormat  = "认证格式有误"
 	codeNotLogin            = "未登录"
 	ErrorAuthToken          = "请求头缺少Auth Token"
+	ErrorRefreshToken       = "刷新 token 错误"
 
 	Username = "Username"
 	Password = "Password"

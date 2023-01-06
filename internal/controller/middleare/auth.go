@@ -13,11 +13,12 @@ const (
 	errorAuthToken         = "请求头中auth为空"
 	errorInvalidToken      = "无效的Token"
 	errorInvalidAuthFormat = "请求头中auth格式有误"
-	errorRefshTonek        = "刷新 token 错误"
+	authInvalid            = "token认证成功"
 )
 
 // 这里记录日志好像只能在这里记录了，没有返回错误，并且是中间件也不需要返回错误
 
+// JWTAuthMiddleware 认证 token
 func JWTAuthMiddleware() func(c *gin.Context) {
 	return func(c *gin.Context) {
 		// 客户端携带Token有三种方式 1.放在请求头 2.放在请求体 3.放在URI
@@ -46,6 +47,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			c.Abort()
 			return
 		}
+		// 刷新 token，前端触发，带着 rtoken 来访问
 		// aToken, rToken, err := jwt.RefreshToken(parts[1], rt)
 		// if err != nil {
 		// 	zap.L().Error(errorRefshTonek, zap.Error(err))
@@ -57,7 +59,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		// 将当前请求的username信息保存到请求的上下文c上
 		// fmt.Printf("middleware UserId = %v\n", mc.UserID)
 		c.Set(controller.ContextUserIDKey, mc.UserID)
-		zap.L().Debug(controller.CodeSuccess.Msg())
+		zap.L().Debug(authInvalid)
 		c.Next() // 后续的处理函数可以用过c.Get("username")来获取当前请求的用户信息
 	}
 }

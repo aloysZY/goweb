@@ -18,12 +18,12 @@ mysql:
   user: root
   password: ydw@123
   db: ginweb
-  max_open_conns: 100
+  max_open_conns: 100000
   max_idle_conns: 20
 
 jwt:
   signing_key: goweb
-  expires_time: 1  #配置的是分钟
+  expires_time: 100  #配置的是分钟
   buffer_time: 60 #配置的是分钟
   issuer: aloys
 
