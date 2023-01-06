@@ -2,7 +2,6 @@ package user
 
 import (
 	"github.com/aloysZy/goweb/internal/controller"
-	"github.com/aloysZy/goweb/internal/controller/response"
 	"github.com/aloysZy/goweb/internal/logic/user"
 	"github.com/aloysZy/goweb/internal/model"
 	"github.com/gin-gonic/gin"
@@ -20,7 +19,7 @@ func SignUpHandler(c *gin.Context) {
 	// ShouldBind()会根据请求的Content-Type自行选择绑定器
 	if err := c.ShouldBind(p); err != nil {
 		// zap.L().Error("signUp with invalid parameters", zap.Error(err))
-		response.ErrorWithMsg(c, controller.CodeInvalidParams, err.Error())
+		controller.ErrorWithMsg(c, controller.CodeInvalidParams, err.Error())
 		return
 		// errs, ok := err.(validator.ValidationErrors)
 		// if !ok {
@@ -41,7 +40,7 @@ func SignUpHandler(c *gin.Context) {
 	// 业务处理,到这里，绑定成功，参数校验也基本满足要求,执行业务逻辑处理
 	if err := user.SignUp(p); err != nil {
 		// zap.L().Error("用户注册失败", zap.String("username", p.Username), zap.Error(err))
-		response.Error(c, controller.CodeRegistrationFailed)
+		controller.Error(c, controller.CodeRegistrationFailed)
 		// c.JSON(http.StatusOK, gin.H{
 		// 	"code": err.Error(),
 		// 	"msg":  "注册失败",
@@ -53,5 +52,5 @@ func SignUpHandler(c *gin.Context) {
 	// 	"code": 200,
 	// 	"msg":  "注册成功",
 	// })
-	response.Success(c)
+	controller.Success(c)
 }

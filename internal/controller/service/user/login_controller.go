@@ -2,7 +2,6 @@ package user
 
 import (
 	"github.com/aloysZy/goweb/internal/controller"
-	"github.com/aloysZy/goweb/internal/controller/response"
 	"github.com/aloysZy/goweb/internal/logic/user"
 	"github.com/aloysZy/goweb/internal/model"
 	"github.com/gin-gonic/gin"
@@ -17,7 +16,7 @@ func LoginHandler(c *gin.Context) {
 	// ShouldBind()会根据请求的Content-Type自行选择绑定器
 	// 将用户输入的用户名和密码绑定到p
 	if err := c.ShouldBind(p); err != nil {
-		response.ErrorWithMsg(c, controller.CodeInvalidParams, err.Error())
+		controller.ErrorWithMsg(c, controller.CodeInvalidParams, err.Error())
 		return
 		// if errs, ok := err.(validator.ValidationErrors); !ok {
 		// 	// 如果类型断言，发现错误不是可以反应的错误，直接返回
@@ -41,7 +40,7 @@ func LoginHandler(c *gin.Context) {
 	// 业务处理,到这里，绑定成功，参数校验也基本满足要求,执行业务逻辑处理
 	token, err := user.Login(p)
 	if err != nil {
-		response.Error(c, controller.CodeServerBusy)
+		controller.Error(c, controller.CodeServerBusy)
 		return
 		// c.JSON(http.StatusOK, gin.H{
 		// 	"code": err.Error(),
@@ -57,7 +56,7 @@ func LoginHandler(c *gin.Context) {
 	// }
 
 	// 返回响应
-	response.Success(c, token)
+	controller.Success(c, token)
 	// c.JSON(http.StatusOK, gin.H{
 	// 	"code":    200,
 	// 	"message": "login success",

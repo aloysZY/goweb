@@ -4,13 +4,12 @@ import (
 	"strings"
 
 	"github.com/aloysZy/goweb/internal/controller"
-	"github.com/aloysZy/goweb/internal/controller/response"
 	"github.com/aloysZy/goweb/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
 
-var (
+const (
 	errorAuthToken         = "请求头中auth为空"
 	errorInvalidToken      = "无效的Token"
 	errorInvalidAuthFormat = "请求头中auth格式有误"
@@ -26,7 +25,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		authHeader := c.Request.Header.Get("Authorization")
 		if authHeader == "" {
 			zap.L().Warn(errorInvalidAuthFormat)
-			response.Error(c, controller.CodeNotLogin)
+			controller.Error(c, controller.CodeNotLogin)
 			c.Abort()
 			return
 		}
@@ -34,7 +33,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		parts := strings.SplitN(authHeader, " ", 2)
 		if !(len(parts) == 2 && parts[0] == "Bearer") {
 			zap.L().Warn(errorAuthToken)
-			response.Error(c, controller.CodeInvalidAuthFormat)
+			controller.Error(c, controller.CodeInvalidAuthFormat)
 			c.Abort()
 			return
 		}
@@ -42,13 +41,13 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		mc, err := jwt.ParseToken(parts[1])
 		if err != nil {
 			zap.L().Warn(errorInvalidToken)
-			response.Error(c, controller.CodeInvalidToken)
+			controller.Error(c, controller.CodeInvalidToken)
 			c.Abort()
 			return
 		}
 		// 将当前请求的username信息保存到请求的上下文c上
 		// fmt.Printf("middleware UserId = %v\n", mc.UserID)
-		c.Set("userId", mc.UserID)
+		c.Set(controller.ContextUserIDKey, mc.UserID)
 		zap.L().Debug(controller.CodeSuccess.Msg())
 		c.Next() // 后续的处理函数可以用过c.Get("username")来获取当前请求的用户信息
 	}
