@@ -4,6 +4,7 @@ import (
 	"strings"
 
 	"github.com/aloysZy/goweb/internal/controller"
+	"github.com/aloysZy/goweb/internal/logic/user"
 	"github.com/aloysZy/goweb/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -47,7 +48,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			c.Abort()
 			return
 		}
-		// 刷新 token，前端触发，带着 rtoken 来访问
+		// 刷新 token，前端触发，带着 rtoken 来访问，不在这里刷新
 		// aToken, rToken, err := jwt.RefreshToken(parts[1], rt)
 		// if err != nil {
 		// 	zap.L().Error(errorRefshTonek, zap.Error(err))
@@ -55,6 +56,15 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		// 	c.Abort()
 		// 	return
 		// }
+
+		// 这里获取当前token,查看是否和存入在 rdis 中的是一样的
+		err = user.GetRedisToken(mc.UserID, parts[1])
+		if err != nil {
+			zap.L().Warn(errorInvalidToken, zap.Error(err))
+			controller.Error(c, controller.CodeInvalidToken)
+			c.Abort()
+			return
+		}
 
 		// 将当前请求的username信息保存到请求的上下文c上
 		// fmt.Printf("middleware UserId = %v\n", mc.UserID)

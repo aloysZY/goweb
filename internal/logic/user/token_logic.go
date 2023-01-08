@@ -4,6 +4,7 @@ import (
 	"errors"
 	"strings"
 
+	"github.com/aloysZy/goweb/internal/dao/redis"
 	"github.com/aloysZy/goweb/internal/logic"
 	"github.com/aloysZy/goweb/pkg/jwt"
 	"go.uber.org/zap"
@@ -13,9 +14,11 @@ var (
 	errorAuthToken = errors.New("请求头缺少Auth Token")
 
 	errorInvalidAuthFormat = errors.New("token格式不对")
+
+	errorTokenError = errors.New("tonekn二次验证错误")
 )
 
-func GetToken(userId uint64) (aToken, rToken string, err error) {
+func GetLoginToken(userId uint64) (aToken, rToken string, err error) {
 	// 这样就找到了userid
 	// fmt.Printf("loginc userId= %d,username=%s\n", user.UserId, user.UserName)
 	// 生成 token
@@ -27,7 +30,7 @@ func GetToken(userId uint64) (aToken, rToken string, err error) {
 	return
 }
 
-func RefreshToken(rt, authHeader string) (aToken, rToken string, err error) {
+func RefreshLoginToken(rt, authHeader string) (aToken, rToken string, err error) {
 	// rt := c.Query("refresh_token")
 	// // 客户端携带Token有三种方式 1.放在请求头 2.放在请求体 3.放在URI
 	// // 这里假设Token放在Header的Authorization中，并使用Bearer开头
@@ -59,5 +62,13 @@ func RefreshToken(rt, authHeader string) (aToken, rToken string, err error) {
 	// 	"access_token":  aToken,
 	// 	"refresh_token": rToken,
 	// })
+	return
+}
+
+func GetRedisToken(userId uint64, atoken string) (err error) {
+	redisToken, err := redis.GetToken(userId)
+	if atoken != redisToken {
+		return errorTokenError
+	}
 	return
 }

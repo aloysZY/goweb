@@ -2,6 +2,7 @@ package user
 
 import (
 	"github.com/aloysZy/goweb/internal/controller"
+	"github.com/aloysZy/goweb/internal/dao/redis"
 	"github.com/aloysZy/goweb/internal/logic/user"
 	"github.com/aloysZy/goweb/internal/model"
 	"github.com/gin-gonic/gin"
@@ -49,11 +50,19 @@ func LoginHandler(c *gin.Context) {
 
 	// fmt.Printf("p%v\n", p)
 	// 还是感觉在登录里面直接做 token 吧,还是在这里调用吧
-	aToken, rToken, err := user.GetToken(p.UserId)
+	aToken, rToken, err := user.GetLoginToken(p.UserId)
 	if err != nil {
 		controller.Error(c, controller.CodeServerBusy)
 	}
 
+	// 设置账户同一时间只能一个用户登录，存储userId 和对于的 atoken到 redis缓存中
+	// jwt 认证后，从 redis 中匹配传入的 token，和存入是不是一致的
+	// 存入 token 和 userid
+	err = redis.SetToken(p.UserId, aToken)
+	if err != nil {
+		controller.Error(c, controller.CodeServerBusy)
+		return
+	}
 	// 返回响应
 	controller.Success(c, aToken, rToken)
 	// c.JSON(http.StatusOK, gin.H{
@@ -65,7 +74,7 @@ func LoginHandler(c *gin.Context) {
 func RefreshTokenHandler(c *gin.Context) {
 	rt := c.Query("refresh_token")
 	authHeader := c.Request.Header.Get("Authorization")
-	aToken, rToken, err := user.RefreshToken(rt, authHeader)
+	aToken, rToken, err := user.RefreshLoginToken(rt, authHeader)
 	if err != nil {
 		controller.Error(c, controller.CodeServerBusy)
 		return

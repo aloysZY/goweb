@@ -23,6 +23,7 @@ func keyFunc(_ *jwt.Token) (i interface{}, err error) {
 // 如果想要保存更多信息，都可以添加到这个结构体中
 type CustomClaims struct {
 	// 可根据需要自行添加字段
+	// redis 需要的字段都可以在这里添加，这是 token 里面可以解析出来的数据
 	UserID uint64 `json:"user_id"`
 	// UserName             string `json:"user_name"`
 	jwt.RegisteredClaims // 内嵌标准的声明
