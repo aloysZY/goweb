@@ -6,6 +6,7 @@ import (
 
 	"github.com/aloysZy/goweb/global/conf"
 	"github.com/aloysZy/goweb/internal/controller/middleare"
+	"github.com/aloysZy/goweb/internal/controller/service"
 	"github.com/aloysZy/goweb/internal/controller/service/user"
 	"github.com/aloysZy/goweb/internal/logger"
 	"github.com/aloysZy/goweb/internal/settings"
@@ -33,10 +34,11 @@ func SetupRouter() {
 	r.POST("/refresh", user.RefreshTokenHandler)
 
 	// 这里面的路由都需要登录验证
-	r.Use(middleare.JWTAuthMiddleware())
+	v1 := r.Group("/api/v1")
+	v1.Use(middleare.JWTAuthMiddleware())
 	{
 		// 测试
-		r.POST("/xxx", func(c *gin.Context) {
+		v1.POST("/test", func(c *gin.Context) {
 			userId := c.MustGet("userID").(uint64)
 			fmt.Printf("route userid=%v\n", userId)
 			c.JSON(http.StatusOK, gin.H{
@@ -45,6 +47,10 @@ func SetupRouter() {
 				"data": gin.H{"user_id": userId},
 			})
 		})
+		// 	获取帖子的分类
+		v1.GET("/community", service.CommunityHandler)
+		// 获取帖子详情
+		v1.GET("/community/:id", service.CommunityDetailHandler)
 	}
 
 	// 在这里启动 gin
